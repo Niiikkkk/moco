@@ -22,3 +22,4 @@ from passl import optimizer as optimizer
 from passl import scheduler as scheduler
 from passl import utils as utils
 from passl import distributed as distributed
+from passl import engine as engine
