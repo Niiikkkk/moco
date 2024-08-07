@@ -24,9 +24,6 @@ paddle.disable_static()
 from passl.utils import config as cfg_util
 print("CIAO")
 sys.stdout.flush()
-from passl.engine import engine
-print("CIAO")
-sys.stdout.flush()
 from passl.engine.engine import Engine
 
 
