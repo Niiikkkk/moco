@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --job-name=python-ex
 #SBATCH --mail-user=s319439@studenti.polito.it
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=END
 #SBATCH --partition=cuda
 #SBATCH --output=/home/nberardo/moco/train.log
 #SBATCH --error=/home/nberardo/moco/train.err
