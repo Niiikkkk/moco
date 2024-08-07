@@ -15,5 +15,5 @@ module load intel/python/3
 # 2 Activate the virtual environment
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
-python /home/nberardo/moco/tools/train.py -c configs/moco/moco_v1_r50.yaml
+python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml
 
