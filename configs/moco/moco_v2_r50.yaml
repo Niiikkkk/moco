@@ -29,7 +29,7 @@ dataloader:
       drop_last: true
     dataset:
       name: ImageNet
-      dataroot: data/ILSVRC2012/train
+      dataroot: home/eaiello/ImageNet/train
       return_label: False
       return_two_sample: True
       transforms:

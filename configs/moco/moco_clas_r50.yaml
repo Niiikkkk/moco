@@ -28,7 +28,7 @@ dataloader:
       drop_last: true
     dataset:
       name: ImageNet
-      dataroot: data/ILSVRC2012/train
+      dataroot: home/eaiello/ImageNet/train
       return_label: True
       transforms:
         - name: RandomResizedCrop
@@ -49,7 +49,7 @@ dataloader:
       drop_last: false
     dataset:
       name: ImageNet
-      dataroot: data/ILSVRC2012/val
+      dataroot: home/eaiello/ImageNet/val
       return_label: True
       transforms:
         - name: Resize
