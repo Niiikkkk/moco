@@ -8,7 +8,7 @@
 #SBATCH --mail-type=ALL
 #SBATCH --partition=cuda
 #SBATCH --output=/home/nberardo/moco/train.log
-#SBATCH --error=/home/nberardo/moco/train.log
+#SBATCH --error=/home/nberardo/moco/train.err
 ###### 1 Load the module
 module load nvidia/cudasdk
 module load intel/python/3

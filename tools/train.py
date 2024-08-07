@@ -16,10 +16,14 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
+import sys
+
 import paddle
 paddle.disable_static()
 
 from passl.utils import config as cfg_util
+print("CIAO")
+sys.stdout.flush()
 from passl.engine.engine import Engine
 
 
