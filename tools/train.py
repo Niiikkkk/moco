@@ -21,8 +21,8 @@ import sys
 import paddle
 paddle.disable_static()
 
-from passl.utils import config as cfg_util
-from passl.engine.engine import Engine
+from ..passl.utils import config as cfg_util
+from ..passl.engine.engine import Engine
 
 
 def main():
