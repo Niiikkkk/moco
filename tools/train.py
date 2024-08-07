@@ -30,7 +30,7 @@ from passl.engine.engine import Engine
 def main():
     args = cfg_util.parse_args()
     config = cfg_util.get_config(
-        args.config, overrides=args.override, show=False)
+        args.config, overrides=args.override, show=True)
     config.profiler_options = args.profiler_options
     engine = Engine(config, mode="train")
     engine.train()
