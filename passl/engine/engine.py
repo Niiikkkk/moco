@@ -48,7 +48,7 @@ class Engine(object):
         assert mode in ["train", "eval", "export"]
         self.mode = mode
         self.config = config
-        print(self.config)
+        print(self.config["Global"])
         self.task_type = self.config["Global"].get("task_type",
                                                    "classification")
         self.use_dali = self.config['Global'].get("use_dali", False)
