@@ -29,6 +29,7 @@ from passl.engine.engine import Engine
 
 def main():
     args = cfg_util.parse_args()
+    print(args)
     config = cfg_util.get_config(
         args.config, overrides=args.override, show=True)
     config.profiler_options = args.profiler_options
