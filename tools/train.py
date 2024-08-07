@@ -24,7 +24,7 @@ paddle.disable_static()
 from passl.utils import config as cfg_util
 print("CIAO")
 sys.stdout.flush()
-from passl.engine.engine import Engine
+from passl.engine import engine as ok
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
     config = cfg_util.get_config(
         args.config, overrides=args.override, show=False)
     config.profiler_options = args.profiler_options
-    engine = Engine(config, mode="train")
+    engine = ok.Engine(config, mode="train")
     engine.train()
 
 
