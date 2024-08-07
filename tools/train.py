@@ -21,6 +21,8 @@ import sys
 import paddle
 paddle.disable_static()
 
+sys.path.append("/home/nberardo/moco/passl/")
+
 from passl.utils import config as cfg_util
 from passl.engine.engine import Engine
 
