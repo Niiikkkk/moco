@@ -12,4 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import engine as engine
+from passl.engine import engine as engine
