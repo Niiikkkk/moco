@@ -23,8 +23,8 @@ paddle.disable_static()
 
 sys.path.append("../passl")
 
-from moco.passl.utils import config as cfg_util
-from moco.passl.engine.engine import Engine
+from ..passl.utils import config as cfg_util
+from ..passl.engine.engine import Engine
 
 
 def main():
