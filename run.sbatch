@@ -17,7 +17,7 @@ source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
 
 #Extract weights
-python tools/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
+python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 #Train
 #python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml --resume /home/nberardo/moco/output_dir/moco_v1_r50/epoch_195.pd
 
