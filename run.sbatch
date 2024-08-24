@@ -2,7 +2,7 @@
 #SBATCH --time=72:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:4
 #SBATCH --job-name=moco
 #SBATCH --mail-user=s319439@studenti.polito.it
 #SBATCH --mail-type=END
@@ -16,7 +16,7 @@ module load intel/python/3
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
 #Linear classifier
-python -m paddle.distributed.launch --gpus="0,1,2,3,4,5,6,7" tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
+python -m paddle.distributed.launch --gpus="0,1,2,3" tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 #Extract weights
 #python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 #Train
