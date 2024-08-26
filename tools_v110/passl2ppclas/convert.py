@@ -43,7 +43,7 @@ def main():
     new_weight_dict = OrderedDict()
 
     if args.type == 'res50':
-        ppclas_res18_keys = get_ppclas_keys('ppclas_res50_keys.txt')
+        ppclas_res18_keys = get_ppclas_keys('/home/nberardo/moco/tools_v110/passl2ppclas/ppclas_res50_keys.txt')
 
         for i, weight in enumerate(ckpt.values()):
             new_weight_dict[ppclas_res18_keys[i]] = weight
