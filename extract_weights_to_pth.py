@@ -4,7 +4,7 @@ import paddle
 #CONVERTIRE il weights.pd senza backbone.
 
 
-model = paddle.load('/home/nberardo/moco/output_dir/moco_v1_r50/weights.pd')
+model = paddle.load('/home/nberardo/moco/output_dir/moco_v1_r50/weights_extracted.pd')
 new_state_dict = {}
 """for name,weights in model["state_dict"].items():
     if name.startswith("module.encoder."):
