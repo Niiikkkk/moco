@@ -11,8 +11,11 @@ new_state_dict = {}
         name = name.replace("module.encoder.", "")
         new_state_dict[name] = weights
 torch.save(new_state_dict, 'resnet50.pth')"""
-for x, item in model.items():
+for x in model:
+    print(x)
+
+"""for x, item in model.items():
     if x.startswith("backbone."):
         x=x.replace("backbone.","")
         new_state_dict[x]=item
-paddle.save(new_state_dict, '/home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd')
+paddle.save(new_state_dict, '/home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd')"""
