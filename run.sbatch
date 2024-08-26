@@ -16,9 +16,9 @@ module load intel/python/3
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
 #Linear classifier
-python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
+#python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 #Extract weights
-#python tools_v110/passl2ppclas/convert.py --type res50 --checkpoint /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pdparams
+python tools_v110/passl2ppclas/convert.py --type res50 --checkpoint /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pdparams
 #python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 #Train
 #python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml --resume /home/nberardo/moco/output_dir/moco_v1_r50/epoch_195.pd
