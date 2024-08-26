@@ -1,7 +1,7 @@
 import torch
 import paddle
 
-model = paddle.load('...')
+model = paddle.load('/home/nberardo/moco/output_dir/moco_v1_r50/epoch_200.pd')
 new_state_dict = {}
 """for name,weights in model["state_dict"].items():
     if name.startswith("module.encoder."):
