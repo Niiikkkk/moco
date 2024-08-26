@@ -1,5 +1,5 @@
 epochs: 100
-output_dir: output_dir
+output_dir: output_dir/moco_v1
 seed: 0
 device: gpu
 # used for static mode and model export
