@@ -23,4 +23,4 @@ source /home/nberardo/myenv/bin/activate
 #Train
 #python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml --resume /home/nberardo/moco/output_dir/moco_v1_r50/epoch_195.pd
 
-python extract_weight.py
+python extract_weights.py
