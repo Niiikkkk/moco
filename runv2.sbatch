@@ -23,10 +23,10 @@ source /home/nberardo/myenv/bin/activate
 
 #Extract weights
   #First extract the weights from the checkpoint. This will extract the weights related to the "backbone"
-  python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v2_r50/epoch_200.pd --output /home/nberardo/moco/output_dir/moco_v2_r50/weights.pd
+  #python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v2_r50/epoch_200.pd --output /home/nberardo/moco/output_dir/moco_v2_r50/weights.pd
 
   #This one converts the extracted "backbone" extracted previously into a specific format usable for classification
-  #python extract_weights_for_class.py
+  python extract_weights_for_class.py
 
   #This one converts the .pd into .pth
   #python extract_weights_to_pth.py
