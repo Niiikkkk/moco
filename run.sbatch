@@ -15,18 +15,20 @@ module load intel/python/3
 # 2 Activate the virtual environment
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
+
 #Linear classifier
-python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd
+  python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd
+
 #Extract weights
+  #First extract the weights from the checkpoint. This will extract the weights related to the "backbone"
+  #python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
 
-#This one extract in "state_dict" the layers that starts with "backbone."
-#python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pd
+  #This one converts the extracted "backbone" extracted previously into a specific format usable for classification
+  #python extract_weights_for_class.py
 
-#This one converts the extracted "backbone." extracted previously into a specific format
-#python tools_v110/passl2ppclas/convert.py --type res50 --checkpoint /home/nberardo/moco/output_dir/moco_v1_r50/latest.pd --output /home/nberardo/moco/output_dir/moco_v1_r50/weights.pdparams
+  #This one converts the .pd into .pth
+  #python extract_weights_to_pth.py
 
 
 #Train
-#python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml --resume /home/nberardo/moco/output_dir/moco_v1_r50/epoch_195.pd
-
-#python extract_weights_to_pth.py
+  #python /home/nberardo/moco/tools_v110/train.py -c configs/moco/moco_v1_r50.yaml --resume /home/nberardo/moco/output_dir/moco_v1_r50/epoch_195.pd
