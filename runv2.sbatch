@@ -16,7 +16,10 @@ module load intel/python/3
 source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
 #Linear classifier
-  #python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd
+  #Train
+  #python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v2_r50/resnet50_extracted.pd
+  #Eval
+  #python tools/train.py -c configs/moco/moco_clas_r50.yaml --load ${CLS_WEGHT_FILE} --evaluate-only
 
 #Extract weights
   #First extract the weights from the checkpoint. This will extract the weights related to the "backbone"
