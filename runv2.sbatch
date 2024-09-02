@@ -17,7 +17,7 @@ source /home/nberardo/myenv/bin/activate
 # 3 Run the python script
 #Linear classifier
   #Train
-  #python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v2_r50/resnet50_extracted.pd
+  python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v2_r50/resnet50_extracted.pd
   #Eval
   #python tools/train.py -c configs/moco/moco_clas_r50.yaml --load ${CLS_WEGHT_FILE} --evaluate-only
 
@@ -26,7 +26,7 @@ source /home/nberardo/myenv/bin/activate
   #python tools_v110/extract_weight.py /home/nberardo/moco/output_dir/moco_v2_r50/epoch_200.pd --output /home/nberardo/moco/output_dir/moco_v2_r50/weights.pd
 
   #This one converts the extracted "backbone" extracted previously into a specific format usable for classification
-  python extract_weights_for_class.py
+  #python extract_weights_for_class.py
 
   #This one converts the .pd into .pth
   #python extract_weights_to_pth.py
