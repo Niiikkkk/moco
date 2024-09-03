@@ -18,7 +18,7 @@ source /home/nberardo/myenv/bin/activate
 
 #Linear classifier
   #Train
-  python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd --resume /home/nberardo/moco/output_dir/moco_v1_r50/moco_clas_r50/latest.pd
+  python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd --resume /home/nberardo/moco/output_dir/moco_v1_r50/moco_clas_r50/epoch_50.pd
   #Eval
   #python tools/train.py -c configs/moco/moco_clas_r50.yaml --load ${CLS_WEGHT_FILE} --evaluate-only
 
