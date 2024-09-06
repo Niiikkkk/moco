@@ -413,6 +413,7 @@ class Trainer:
             log_items.append(val)
         log_str += ', '.join(log_items)
         self.logger.info(log_str)
+        print(log_str)
 
         self.model.train()
 
