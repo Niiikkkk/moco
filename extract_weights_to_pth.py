@@ -6,7 +6,7 @@ new_state_dict = {}
 for x in model:
     print(x)
 for name,weights in model.items():
-    new_state_dict[name] = weights
+    new_state_dict[name] = weights.numpy()
 print("")
 for x in new_state_dict:
     print(x)
