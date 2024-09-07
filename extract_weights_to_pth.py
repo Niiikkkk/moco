@@ -10,4 +10,4 @@ for name,weights in model.items():
 print("")
 for x in new_state_dict:
     print(x)
-#torch.save(new_state_dict, '/home/nberardo/moco/output_dir/moco_v2_r50/resnet50_extracted.pth')
+torch.save(new_state_dict, '/home/nberardo/moco/output_dir/moco_v2_r50/resnet50_extracted.pth')
