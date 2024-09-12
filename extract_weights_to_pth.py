@@ -3,7 +3,7 @@ import paddle
 
 
 
-model = paddle.load('/home/nberardo/moco/output_dir/moco_v1_r50/latest.pd')
+model = paddle.load('/home/nberardo/moco/output_dir/moco_v1_r50/epoch_200.pd')
 new_state_dict = {}
 for name,weights in model.items():
     print(name)
