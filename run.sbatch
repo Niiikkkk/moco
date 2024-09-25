@@ -20,7 +20,7 @@ source /home/nberardo/myenv/bin/activate
   #Train
   #python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --pretrained /home/nberardo/moco/output_dir/moco_v1_r50/resnet50_extracted.pd --resume /home/nberardo/moco/output_dir/moco_v1_r50/moco_clas_r50/epoch_50.pd
   #Eval
-  #python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --load /home/nberardo/moco/output_dir/moco_v1_r50/moco_clas_r50/epoch_100.pd --evaluate-only
+  python tools_v110/train.py -c configs/moco/moco_clas_r50.yaml --load /home/nberardo/moco/moco_v2_r50_clas.pdparams --evaluate-only
 
 #Extract weights
   #First extract the weights from the checkpoint. This will extract the weights related to the "backbone"
@@ -30,7 +30,7 @@ source /home/nberardo/myenv/bin/activate
   #python extract_weights_for_class.py
 
   #This one converts the .pd into .pth
-  python extract_weights_to_pth.py
+#  python extract_weights_to_pth.py
 
 
 #Train
