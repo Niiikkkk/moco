@@ -10,4 +10,4 @@ for name,weights in model["state_dict"].items():
     if name.startswith('backbone.'):
         name = name.replace('backbone.','')
         new_state_dict[name] = torch.from_numpy(weights.numpy())
-# torch.save(new_state_dict, '/home/nberardo/moco/moco_v1_r50_clas.pth')
+torch.save(new_state_dict, '/home/nberardo/moco/moco_v1_r50_clas.pth')
