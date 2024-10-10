@@ -10,7 +10,7 @@ for name,weights in model["state_dict"].items():
         name = name.replace('_mean', 'running_mean')
         name = name.replace('_variance', 'running_var')
         new_state_dict[name] = torch.from_numpy(weights.numpy())
-    print("name")
+    print(name)
 print("")
 model = torch.load('/home/nberardo/vicreg/experiment/resnet50.pth')
 for name,weights in model.items():
